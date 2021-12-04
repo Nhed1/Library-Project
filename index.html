@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Library Project</h1>
+        </header>
+
+        <div class="add-books">
+            <form class="form-books" action="#">
+                <div class="div-title">
+                    <label for="title">Title</label>
+                    <input id="title" type="text">
+                </div>
+
+                <div class="div-author">
+                    <label for="author">Author</label>
+                    <input id="author" type="text">
+                </div>
+
+                <div class="div-pages">
+                    <label for="pages">Number of pages</label>
+                    <input id="pages" type="number">
+                </div>
+                <div class="submit">
+                    <button class="add">Add a book</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="books-shelf">
+            <div class="book">
+                <p id="title">Title: <span class="title-name"></span></p>
+                <p id="author">Author: <span class="author-name"></span> </p>
+                <p id="pages">Pages: <span class="pages-name"></span> </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
