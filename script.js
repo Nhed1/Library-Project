@@ -2,8 +2,17 @@ let submit = document.querySelector('.add'),
     shelf = document.querySelector('.books-shelf'),
     library = []
 
-function createDiv() {
-    let element = document.createElement('div')
+function createDiv(title, author, pages) {
+    let element = document.createElement('div'),
+        bookEls = [title, author, pages],
+        names = ['Title', 'Author', 'Pages']
+
+    for (let i = 0; i < 3; i++) {
+        let p = document.createElement('p')
+        p.textContent = `${names[i]}:  ${bookEls[i]}`
+        element.appendChild(p)
+    }
+
     element.classList.add('book')
     shelf.appendChild(element)
 }
@@ -17,11 +26,7 @@ function Book() {
 function addBookToLibrary() {
     let book = new Book;
     library.push(book)
-
-
-    library.forEach(book => {
-        createDiv()
-    })
+    createDiv(book.title, book.author, book.pages)
 }
 
 submit.addEventListener('click', addBookToLibrary)
