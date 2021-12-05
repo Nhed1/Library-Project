@@ -6,6 +6,22 @@
     font-family: sans-serif;
 }
 
+header h1 {
+    font-size: 2.5rem;
+}
+
+form label, button {
+    font-size: 1.2rem;
+}
+
+form input {
+    font-size: 1.1rem;
+}
+button {
+    width: 200px;
+    height: 50px;   
+}
+
 body {
     height: 100vh;
 }
@@ -21,23 +37,6 @@ header {
     place-items: center;
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
-
-form label {
-    font-size: 1.2rem;
-}
-
-form input {
-    font-size: 1.1rem;
-}
-
-.add-books {
-    border: 1px black solid;
-}
-
-
 .form-books, .form-books>div {
     padding: 10px;
     display: flex;
@@ -47,10 +46,7 @@ form input {
 }
 
 .books-shelf{
-    max-height: inherit;
-    padding: 10px 30px;
-    border: 1px black solid;
-    height: fit-content;
+    padding: 10px 50px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -61,27 +57,15 @@ form input {
     height: 200px;
 }
 
-
-/* media queries */
-@media (min-width: 400px) {
+@media (min-width: 600px) {
     .books-shelf{
         grid-template-columns: repeat(2,1fr);
     }
 }
 
-@media (min-width: 600px) {
-    .books-shelf{
-        grid-template-columns: repeat(3,1fr);
-    }
-}
-@media (min-width: 800px) {
-    .books-shelf{
-        grid-template-columns: repeat(4,1fr);
-    }
-}
-
 @media (min-width: 1100px) {
     .books-shelf{
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(3,1fr);
+        padding: 200px;
     }
 }
