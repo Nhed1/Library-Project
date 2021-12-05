@@ -47,7 +47,6 @@ form input {
 }
 
 .books-shelf{
-    /* width: 100%; */
     max-height: inherit;
     padding: 10px 30px;
     border: 1px black solid;
@@ -55,7 +54,6 @@ form input {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    /* grid-template-rows: repeat(3,minmax(200px,1fr)); */
 }
 
 .book {
