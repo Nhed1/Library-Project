@@ -10,15 +10,21 @@ function Book() {
 }
 
 function addBookToLibrary() {
-    let book = new Book;
-    library.push(book)
-    CreateDiv()
+    if (title.value && author.value && pages.value) {
+        let book = new Book;
+        library.push(book)
+        CreateDiv()
+    } else {
+        alert('You need to add all the information about the book')
+    }
+
 }
 
 function CreateDiv() {
     let divBook = document.createElement('div'),
         removeButton = document.createElement('button')
     removeButton.textContent = 'Remover'
+
     // add text to the divs -----------------
     let title = document.createElement('p')
     title.textContent = this.title.value
@@ -32,6 +38,7 @@ function CreateDiv() {
     pages.textContent = this.pages.value
     divBook.appendChild(pages)
 
+    // remove button added -----------
     divBook.appendChild(removeButton)
     // add the book to the shelf
     divBook.classList.add('book')
@@ -40,6 +47,7 @@ function CreateDiv() {
 
 
 CreateDiv.prototype = Object.create(Book.prototype)
+addBookToLibrary.prototype = Object.create(Book.prototype)
 
 
 

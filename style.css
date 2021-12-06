@@ -31,7 +31,7 @@ body {
 }
 .container{
     min-height: 100%;
-    background: rgb(165, 43, 43);
+    background: rgb(214, 139, 139);
 }
 
 header {
@@ -58,6 +58,7 @@ header {
 
 .book {
     border: 1px black solid;
+    background: rgb(187, 114, 114);
     height: 150px;
 
     position: relative;
