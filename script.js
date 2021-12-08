@@ -35,15 +35,15 @@ function CreateDiv() {
 
     // add text to the divs -----------------
     let title = document.createElement('p')
-    title.textContent = this.title.value
+    title.textContent = `Title: "${this.title.value}"`
     divBook.appendChild(title)
 
     let author = document.createElement('p')
-    author.textContent = this.author.value
+    author.textContent = `Author: ${this.author.value}`
     divBook.appendChild(author)
 
     let pages = document.createElement('p')
-    pages.textContent = this.pages.value
+    pages.textContent = `Pages: ${this.pages.value}`
     divBook.appendChild(pages)
 
     // remove and read button added -----------
@@ -83,8 +83,6 @@ function read(readButton) {
 
     })
 }
-
-
 
 submit.addEventListener('click', addBookToLibrary)
 
