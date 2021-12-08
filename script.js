@@ -52,10 +52,12 @@ function CreateDiv() {
     divBook.classList.add('book')
     shelf.appendChild(divBook)
 
-    removeBook(removeButton)
+    removeBook()
 }
 
-function removeBook()
+function removeBook() {
+    console.log('heu')
+}
 
 CreateDiv.prototype = Object.create(Book.prototype)
 addBookToLibrary.prototype = Object.create(Book.prototype)
