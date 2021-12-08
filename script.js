@@ -1,5 +1,6 @@
 let submit = document.querySelector('.add'),
     shelf = document.querySelector('.books-shelf'),
+    remove = document.querySelector('.remove'),
     library = []
 
 function Book() {
@@ -21,8 +22,11 @@ function addBookToLibrary() {
 
 function CreateDiv() {
     let divBook = document.createElement('div'),
-        removeButton = document.createElement('button')
-    removeButton.textContent = 'Remover'
+        removeButton = document.createElement('button'),
+        readButton = document.createElement('button')
+
+    removeButton.textContent = 'Remove'
+    readButton.textContent = 'Read'
 
     // add text to the divs -----------------
     let title = document.createElement('p')
@@ -37,18 +41,21 @@ function CreateDiv() {
     pages.textContent = this.pages.value
     divBook.appendChild(pages)
 
-    // remove button added -----------
+    // remove and read button added -----------
     divBook.appendChild(removeButton)
+    divBook.appendChild(readButton)
+
+    removeButton.classList.add('remove')
+    readButton.classList.add('remove')
+
     // add the book to the shelf
     divBook.classList.add('book')
     shelf.appendChild(divBook)
 
-    removeBook()
+    removeBook(removeButton)
 }
 
-function removeBook() {
-    console.log(this.removeButton)
-}
+function removeBook()
 
 CreateDiv.prototype = Object.create(Book.prototype)
 addBookToLibrary.prototype = Object.create(Book.prototype)
