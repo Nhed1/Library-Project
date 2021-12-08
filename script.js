@@ -17,7 +17,6 @@ function addBookToLibrary() {
     } else {
         alert('You need to add all the information about the book')
     }
-
 }
 
 function CreateDiv() {
@@ -43,11 +42,17 @@ function CreateDiv() {
     // add the book to the shelf
     divBook.classList.add('book')
     shelf.appendChild(divBook)
+
+    removeBook()
 }
 
+function removeBook() {
+    console.log(this.removeButton)
+}
 
 CreateDiv.prototype = Object.create(Book.prototype)
 addBookToLibrary.prototype = Object.create(Book.prototype)
+removeBook.prototype = Object.create(CreateDiv.prototype)
 
 
 
