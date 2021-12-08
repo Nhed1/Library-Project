@@ -27,7 +27,8 @@ function CreateDiv() {
     let divBook = document.createElement('div'),
         removeButton = document.createElement('button'),
         readButton = document.createElement('button'),
-        removeButtons = []
+        removeButtons = [],
+        readButtons = []
 
     removeButton.textContent = 'Remove'
     readButton.textContent = 'Read'
@@ -61,6 +62,11 @@ function CreateDiv() {
     removeButtons.forEach(button => {
         removeBook(button)
     })
+
+    readButtons.push(readButton)
+    readButtons.forEach(button => {
+        read(button)
+    })
 }
 
 function removeBook(removeButton) {
@@ -68,9 +74,15 @@ function removeBook(removeButton) {
         let div = this.parentNode
         shelf.removeChild(div)
     })
-
 }
 
+function read(readButton) {
+    readButton.addEventListener('click', function () {
+        let button = this
+        button.classList.toggle("read")
+
+    })
+}
 
 
 

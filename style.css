@@ -73,6 +73,10 @@ header {
     height: 40px;
 }
 
+.read {
+    background: rgb(172, 218, 126);
+}
+
 @media (min-width: 600px) {
     .books-shelf{
         grid-template-columns: repeat(2,1fr);
